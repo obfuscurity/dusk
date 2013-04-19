@@ -38,18 +38,6 @@ $ heroku scale -r $DEPLOY web=1
 $ heroku open -r $DEPLOY
 ```
 
-## GitHub Authentication
-
-To authenticate against a GitHub organization, set the following environment variables:
-
-```bash
-$ export GITHUB_CLIENT_ID=<id>
-$ export GITHUB_CLIENT_SECRET=<secret>
-$ export GITHUB_AUTH_ORGANIZATION=<org>
-```
-
-To register an OAuth application, go here: https://github.com/settings/applications
-
 ## License 
 
 Dusk is distributed under the MIT license.

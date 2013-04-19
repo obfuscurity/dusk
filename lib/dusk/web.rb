@@ -33,6 +33,10 @@ module Dusk
     get '/' do
       erb :index, :locals => {}
     end
+
+    get '/metrics/find' do
+      RestClient.get("#{ENV['GRAPHITE_URL']}#{request.env['REQUEST_URI']}")
+    end
   end
 end
 

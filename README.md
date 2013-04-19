@@ -8,6 +8,10 @@ Dusk is a dashboard app based on [cubism.js](https://github.com/square/cubism). 
 
 Dusk is designed to be simple and purpose-driven. Any string passed to the `/metrics/` endpoint (including wildcards) will be used as the search context. All metrics found by the Graphite server will be returned and rendered live.
 
+For example, loading `/metrics/collectd.*.load.load.shortterm` will render the `shortterm` metric for all servers in your Graphite instance.
+
+![usage](https://github.com/obfuscurity/dusk/raw/master/lib/dusk/public/img/screenshot-usage.png)
+
 ## Deployment
 
 The only required environment variable is `GRAPHITE_URL`. This should be set to the base URL of your Graphite composer (e.g. `https://graphite.yourdomain.com`). If your server requires Basic Auth, include the credentials in your `GRAPHITE_URL` (e.g. `https://user:pass@graphite.yourdomain.com`).

@@ -1,0 +1,47 @@
+div.horizon {
+  position: relative;
+}
+
+div.horizon.hover {
+  height: 35px;
+}
+
+.horizon canvas {
+  display: block;
+}
+
+.horizon.hover canvas {
+  transform: scaleY(6);
+  -webkit-transform: scaleY(6);
+  -moz-transform: scaleY(6);
+  -ms-transform: scaleY(6);
+  -o-transform: scaleY(6);
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+span.title {
+  left: 0;
+}
+
+span.value {
+  right: 0;
+}
+
+span.title, span.value {
+  bottom: 0;
+  line-height: 30px;
+  margin: 0 6px;
+  position: absolute;
+  text-shadow: 0 1px 0 rgba(255,255,255,1.0);
+  white-space: nowrap;
+  visibility: hidden;
+}
+
+.hover span.title, .hover span.value {
+  visibility: visible;
+  font: 3.0em sans-serif;
+  font-weight: bold;
+}

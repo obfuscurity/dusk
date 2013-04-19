@@ -15,6 +15,10 @@
       <script src="/js/dusk.js" type="text/javascript"></script>
       <script type="text/javascript">
         var myTarget = '<%= target %>'
+        var dashboard = new Dusk(myTarget)
+        dashboard.generateAxis()
+        dashboard.generateRule()
+        dashboard.generateHorizons()
       </script>
       <% end %>
     </div>

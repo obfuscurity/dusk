@@ -4,6 +4,8 @@
 
 Dusk is a dashboard app based on [cubism.js](https://github.com/square/cubism). The primary case for Dusk is finding hotspots across a range of values in the same metric domain, e.g. viewing disk latency across an array of disks or fleet of servers.
 
+This project should still be considered beta software. There are known performance and usability issues to address before anyone should rely on this in production.
+
 ## Usage
 
 Dusk is designed to be simple and purpose-driven. Any string passed to the `/metrics/` endpoint (including wildcards) will be used as the search context. All metrics found by the Graphite server will be returned and rendered live.

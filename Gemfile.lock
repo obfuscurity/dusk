@@ -1,0 +1,77 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.3.4)
+    daemons (1.1.9)
+    diff-lcs (1.2.3)
+    eventmachine (1.0.3)
+    faraday (0.8.7)
+      multipart-post (~> 1.1)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
+    hashie (1.2.0)
+    json (1.7.7)
+    mime-types (1.22)
+    multi_json (1.7.2)
+    multipart-post (1.2.0)
+    oauth2 (0.5.2)
+      faraday (~> 0.7)
+      multi_json (~> 1.0)
+    octokit (1.19.0)
+      addressable (~> 2.2)
+      faraday (~> 0.8)
+      faraday_middleware (~> 0.9)
+      hashie (~> 1.2)
+      multi_json (~> 1.3)
+    rack (1.5.2)
+    rack-protection (1.5.0)
+      rack
+    rack-ssl-enforcer (0.2.5)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rake (10.0.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rspec (2.13.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    rspec-core (2.13.1)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.1)
+    sinatra (1.4.2)
+      rack (~> 1.5, >= 1.5.2)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
+    sinatra_auth_github (0.12.0)
+      sinatra (~> 1.0)
+      warden-github (~> 0.12.0)
+    thin (1.5.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+    tilt (1.3.7)
+    warden (1.2.1)
+      rack (>= 1.0)
+    warden-github (0.12.1)
+      json (~> 1.5)
+      oauth2 (~> 0.5.2)
+      octokit (~> 1.19.0)
+      rest-client (~> 1.6.1)
+      warden (~> 1.0)
+      yajl-ruby (~> 1.1)
+    yajl-ruby (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rack-ssl-enforcer
+  rack-test
+  rake
+  rest-client
+  rspec
+  sinatra
+  sinatra_auth_github (= 0.12.0)
+  thin (~> 1.5.0)

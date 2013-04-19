@@ -2,6 +2,7 @@ require 'sinatra'
 require 'rack-ssl-enforcer'
 require 'sinatra_auth_github'
 require 'json'
+require 'uri'
 
 module Dusk
   class Web < Sinatra::Base
@@ -40,6 +41,10 @@ module Dusk
 
     get '/render/?' do
       RestClient.get("#{ENV['GRAPHITE_URL']}#{request.env['REQUEST_URI']}")
+    end
+
+    get %r{/metrics/(\S+)} do |metric|
+      erb :index, :locals => { :target => URI.encode(metric) }
     end
   end
 end

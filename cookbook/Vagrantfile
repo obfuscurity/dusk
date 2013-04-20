@@ -9,7 +9,9 @@ Vagrant.configure('2') do |config|
     shell.inline = 'test -f $1 || (sudo apt-get update -y && touch $1)'
     shell.args = '/var/run/apt-get-update'
   end
+
   config.vm.provision :chef_solo do |chef|
+    chef.add_recipe 'dusk::deps'
     chef.add_recipe 'dusk'
   end
 end

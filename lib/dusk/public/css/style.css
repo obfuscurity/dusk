@@ -32,16 +32,30 @@ span.value {
 
 span.title, span.value {
   bottom: 0;
-  line-height: 30px;
-  margin: 0 6px;
   position: absolute;
-  text-shadow: 0 1px 0 rgba(255,255,255,1.0);
-  white-space: nowrap;
   visibility: hidden;
+}
+
+.hover span.title {
+  font: 3.0em sans-serif;
+  transform: translateX(-110%);
+  -webkit-transform: translateX(-110%);
+  -moz-transform: translateX(-110%);
+  -ms-transform: translateX(-110%);
+  -o-transform: translateX(-110%);
+}
+
+.hover span.value {
+  font: 4.0em sans-serif;
+  transform: translateX(110%);
+  -webkit-transform: translateX(110%);
+  -moz-transform: translateX(110%);
+  -ms-transform: translateX(110%);
+  -o-transform: translateX(110%);
 }
 
 .hover span.title, .hover span.value {
   visibility: visible;
-  font: 3.0em sans-serif;
   font-weight: bold;
 }
+

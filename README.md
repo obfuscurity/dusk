@@ -18,7 +18,7 @@ For example, loading `/metrics/collectd.*.load.load.shortterm` will render the `
 
 The only required environment variable is `GRAPHITE_URL`. This should be set to the base URL of your Graphite composer (e.g. `https://graphite.yourdomain.com`). If your server requires Basic Auth, include the credentials in your `GRAPHITE_URL` (e.g. `https://user:pass@graphite.yourdomain.com`).
 
-### Development
+### Local
 
 ```bash
 $ bundle install
@@ -27,7 +27,7 @@ $ foreman start
 $ open http://127.0.0.1:5000
 ```
 
-### Production
+### Heroku
 
 ```bash
 $ export DEPLOY=production/staging/you
@@ -37,6 +37,10 @@ $ git push $DEPLOY master
 $ heroku scale -r $DEPLOY web=1
 $ heroku open -r $DEPLOY
 ```
+
+### Chef Cookbook
+
+[Will Maier](https://github.com/whilp) of Simple has kindly contributed a [Dusk cookbook](https://github.com/SimpleFinance/chef-dusk) for Chef users.
 
 ## GitHub Authentication
 

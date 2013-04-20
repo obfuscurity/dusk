@@ -10,7 +10,7 @@ deploy_revision node[:dusk][:root] do
   symlink_before_migrate.clear
   keep_releases 0
   before_restart do
-    execute 'bundle install' do
+    execute 'bundle install --binstubs' do
       cwd release_path
     end
   end

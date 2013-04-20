@@ -12,7 +12,7 @@ deploy_revision node[:dusk][:root] do
   before_restart do
     execute 'bundle install'
   end
-  notifies :restart 'runit_service[dusk]'
+  notifies :restart, 'runit_service[dusk]'
 end
 
 runit_service 'dusk' do

@@ -10,6 +10,7 @@ module Dusk
     configure do
       enable :logging
       enable :sessions
+      set :port, ENV['PORT'] || 5000
 
       mime_type :js, 'text/javascript'
 

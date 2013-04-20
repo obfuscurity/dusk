@@ -1,8 +1,11 @@
 #!/bin/sh
 
+env=$PWD/env
+
 exec 2>&1
 
+cd <%= @options[:root] %>/current
 exec chpst \
-     -e $PWD/env \
-     -u <%= @options[:user] %>
-     <%= @options[:root] %>/current/bin/thin start
+     -e $env \
+     -u <%= @options[:user] %> \
+     ./bin/thin start

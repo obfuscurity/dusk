@@ -10,7 +10,9 @@ deploy_revision node[:dusk][:root] do
   symlink_before_migrate.clear
   keep_releases 0
   before_restart do
-    execute 'bundle install'
+    execute 'bundle install' do
+      cwd release_path
+    end
   end
   notifies :restart, 'runit_service[dusk]'
 end

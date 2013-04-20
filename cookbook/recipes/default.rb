@@ -1,5 +1,3 @@
-package 'git'
-
 include_recipe 'runit'
 
 user node[:dusk][:user]

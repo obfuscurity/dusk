@@ -49,7 +49,7 @@ module Dusk
     end
 
     post %r{/favorites/(\S+)} do |metric|
-      session[:favorites].push(metric)
+      session[:favorites].push(metric) unless session[:favorites].include?(metric)
       status 204
     end
 

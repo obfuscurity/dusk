@@ -1,3 +1,23 @@
+span.star {
+  float: right;
+  margin-top: 8px;
+}
+
+.star a {
+  font-size: 1.4em;
+  color: rgba(255, 255, 255, 0.39);
+}
+
+.star a:hover {
+  text-decoration: none;
+}
+
+.star a:hover:before {
+  position: absolute;
+  content: "\2605";
+  color: #ff0;
+}
+
 div.wrapper {
   margin-top: 30px;
 }

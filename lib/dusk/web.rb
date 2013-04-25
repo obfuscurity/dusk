@@ -52,6 +52,15 @@ module Dusk
       session[:favorites].push(metric)
       status 204
     end
+
+    delete %r{/favorites/(\S+)} do |metric|
+      if session[:favorites].include?(metric)
+        session[:favorites].delete(metric)
+        status 204
+      else
+        status 404
+      end
+    end
   end
 end
 

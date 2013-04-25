@@ -27,10 +27,10 @@
       <script type="text/javascript">
         var myTarget = '<%= target %>'
         var dashboard = new Dusk(myTarget)
+        dashboard.setFavoriteStatus()
         dashboard.generateAxis()
         dashboard.generateRule()
         dashboard.generateHorizons()
-        dashboard.setFavoriteStatus()
         // bind the favorite() action to an inactive star
         $('span.star').on('click', 'a', function() {
           $('.star a').addClass('active')

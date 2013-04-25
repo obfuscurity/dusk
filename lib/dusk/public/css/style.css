@@ -12,10 +12,15 @@ span.star {
   text-decoration: none;
 }
 
-.star a:hover:before {
+.star a:hover:before, .star a.active:before {
   position: absolute;
   content: "\2605";
   color: #ff0;
+}
+
+.star a.active:hover:before {
+  content: "\2606";
+  color: rgba(255, 255, 255, 0.39);
 }
 
 div.wrapper {

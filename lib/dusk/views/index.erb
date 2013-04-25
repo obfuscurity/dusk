@@ -56,11 +56,13 @@
       <% else %>
       <h2>Welcome to Dusk</h2>
         <% if defined?(favorites) %>
-        <ul>
-          <% favorites.each do |metric| %>
-            <li><a href="/metrics/<%= metric %>"><%= metric %></a></li>
-          <% end %>
-        </ul>
+        <div class="row">
+          <ul class="favorites">
+            <% favorites.each do |metric| %>
+              <li><a href="/metrics/<%= metric %>"><%= metric %></a></li>
+            <% end %>
+          </ul>
+        </div>
         <% end %>
       <% end %>
     </div>

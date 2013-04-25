@@ -29,10 +29,11 @@ module Dusk
       elsif organization = ENV['GITHUB_AUTH_ORGANIZATION']
         github_organization_authenticate!(organization)
       end
+      session[:favorites] ||= []
     end
 
     get '/' do
-      erb :index, :locals => {}
+      erb :index, :locals => { :favorites => session[:favorites] }
     end
 
     get '/metrics/find' do

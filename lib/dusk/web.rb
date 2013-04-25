@@ -48,6 +48,11 @@ module Dusk
       erb :index, :locals => { :target => URI.encode(metric) }
     end
 
+    get '/favorites/?' do
+      status 200
+      session[:favorites].to_json
+    end
+
     post %r{/favorites/(\S+)} do |metric|
       session[:favorites].push(metric) unless session[:favorites].include?(metric)
       status 204

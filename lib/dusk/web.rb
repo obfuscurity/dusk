@@ -46,6 +46,11 @@ module Dusk
     get %r{/metrics/(\S+)} do |metric|
       erb :index, :locals => { :target => URI.encode(metric) }
     end
+
+    post %r{/favorites/(\S+)} do |metric|
+      session[:favorites].push(metric)
+      status 204
+    end
   end
 end
 

@@ -31,6 +31,20 @@
         dashboard.generateRule()
         dashboard.generateHorizons()
         dashboard.setFavoriteStatus()
+        // bind the favorite() action to an inactive star
+        $('span.star').on('click', 'a', function() {
+          $('.star a').addClass('active')
+          dashboard.favorite(function() {
+            dashboard.setFavoriteStatus()
+          })
+        })
+        // bind the unfavorite() action to an active star
+        $('span.star').on('click', 'a.active', function() {
+          $('.star a').removeClass('active')
+          dashboard.unfavorite(function() {
+            dashboard.setFavoriteStatus()
+          })
+        })
       </script>
       <% else %>
       <h2>Welcome to Dusk</h2>

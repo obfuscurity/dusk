@@ -45,6 +45,7 @@
 
         // bind the unfavorite() action to an active star
         $('span.star').on('click', 'a.active', function() {
+          $('.star a').addClass('inactive')
           $('.star a').removeClass('active')
           dashboard.unfavorite(function() {
             dashboard.setFavoriteStatus()

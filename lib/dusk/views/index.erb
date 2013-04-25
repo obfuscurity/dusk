@@ -35,8 +35,9 @@
         dashboard.generateHorizons()
 
         // bind the favorite() action to an inactive star
-        $('span.star').on('click', 'a', function() {
+        $('span.star').on('click', 'a.inactive', function() {
           $('.star a').addClass('active')
+          $('.star a').removeClass('inactive')
           dashboard.favorite(function() {
             dashboard.setFavoriteStatus()
           })

@@ -2,6 +2,10 @@ div.wrapper {
   margin-top: 30px;
 }
 
+.wrapper ul {
+  list-style: none;
+}
+
 div.horizon {
   position: relative;
 }

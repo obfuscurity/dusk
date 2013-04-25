@@ -31,6 +31,10 @@ div.wrapper {
   list-style: none;
 }
 
+.wrapper ul.favorites {
+  margin-top: 20px;
+}
+
 div.horizon {
   position: relative;
 }

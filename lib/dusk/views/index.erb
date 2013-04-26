@@ -17,54 +17,29 @@
           <a class="brand" href="/">Dusk</a>
           <% if defined?(target) %>
             <span class="star"><a href="#">&#9734;</a></span>
-        <% end %>
+          <% end %>
         </div>
       </div>
     </div>
     <div class="wrapper container">
-      <% if defined?(target) %>
+    <% if defined?(target) %>
       <script src="/js/dusk.js" type="text/javascript"></script>
       <script type="text/javascript">
-
         var myTarget = '<%= target %>'
-        var dashboard = new Dusk(myTarget)
-
-        dashboard.setFavoriteStatus()
-        dashboard.generateAxis()
-        dashboard.generateRule()
-        dashboard.generateHorizons()
-
-        // bind the favorite() action to an inactive star
-        $('span.star').on('click', 'a.inactive', function() {
-          $('.star a').addClass('active')
-          $('.star a').removeClass('inactive')
-          dashboard.favorite(function() {
-            dashboard.setFavoriteStatus()
-          })
-        })
-
-        // bind the unfavorite() action to an active star
-        $('span.star').on('click', 'a.active', function() {
-          $('.star a').addClass('inactive')
-          $('.star a').removeClass('active')
-          dashboard.unfavorite(function() {
-            dashboard.setFavoriteStatus()
-          })
-        })
-
       </script>
-      <% else %>
+      <script src="/js/app.js" type="text/javascript"></script>
+    <% else %>
       <h2>Welcome to Dusk</h2>
-        <% if defined?(favorites) %>
+      <% if defined?(favorites) %>
         <div class="row">
           <ul class="favorites">
-            <% favorites.each do |metric| %>
-              <li><a href="/metrics/<%= metric %>"><%= metric %></a></li>
-            <% end %>
+          <% favorites.each do |metric| %>
+            <li><a href="/metrics/<%= metric %>"><%= metric %></a></li>
+          <% end %>
           </ul>
         </div>
-        <% end %>
       <% end %>
+    <% end %>
     </div>
   </body>
 </html>

@@ -45,7 +45,7 @@ module Dusk
     end
 
     get %r{/metrics/(\S+)} do |metric|
-      erb :index, :locals => { :target => URI.encode(metric) }
+      erb :index, :locals => { :target => URI.encode(metric), :index => params[:index] }
     end
 
     get '/favorites/?' do

@@ -26,6 +26,9 @@
       <script src="/js/dusk.js" type="text/javascript"></script>
       <script type="text/javascript">
         var myTarget = '<%= target %>'
+        <% if defined?(index) %>
+        var myNameIndex = '<%= index %>'
+        <% end %>
       </script>
       <script src="/js/app.js" type="text/javascript"></script>
     <% else %>

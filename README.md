@@ -30,12 +30,11 @@ $ open http://127.0.0.1:5000
 ### Heroku
 
 ```bash
-$ export DEPLOY=production/staging/you
-$ heroku create -r $DEPLOY -s cedar dusk-$DEPLOY
-$ heroku config:set -r $DEPLOY GRAPHITE_URL=...
-$ git push $DEPLOY master
-$ heroku scale -r $DEPLOY web=1
-$ heroku open -r $DEPLOY
+$ heroku create
+$ heroku config:add GRAPHITE_URL=...
+$ git push heroku master
+$ heroku scale web=1
+$ heroku open
 ```
 
 ### Chef Cookbook

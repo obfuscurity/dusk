@@ -74,13 +74,15 @@ span.title, span.value {
 }
 
 .hover span.title {
-  font: 2.0em sans-serif;
-  opacity: 0.4;
+  font: 1.6em sans-serif;
+  opacity: 0.5;
+  margin-left: 15px;
 }
 
 .hover span.value {
   font: 3.0em sans-serif;
-  opacity: 0.4;
+  opacity: 0.5;
+  margin-right: 15px;
 }
 
 .hover span.title, .hover span.value {

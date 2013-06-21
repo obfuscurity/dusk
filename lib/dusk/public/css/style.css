@@ -74,21 +74,13 @@ span.title, span.value {
 }
 
 .hover span.title {
-  font: 3.0em sans-serif;
-  transform: translateX(-110%);
-  -webkit-transform: translateX(-110%);
-  -moz-transform: translateX(-110%);
-  -ms-transform: translateX(-110%);
-  -o-transform: translateX(-110%);
+  font: 2.0em sans-serif;
+  opacity: 0.4;
 }
 
 .hover span.value {
-  font: 4.0em sans-serif;
-  transform: translateX(110%);
-  -webkit-transform: translateX(110%);
-  -moz-transform: translateX(110%);
-  -ms-transform: translateX(110%);
-  -o-transform: translateX(110%);
+  font: 3.0em sans-serif;
+  opacity: 0.4;
 }
 
 .hover span.title, .hover span.value {

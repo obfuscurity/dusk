@@ -10,7 +10,7 @@ This project should still be considered beta software. There are known performan
 
 Dusk is designed to be simple and purpose-driven. Any string passed to the `/metrics/` endpoint (including wildcards) will be used as the search context. All metrics found by the Graphite server will be returned and rendered live.
 
-For example, loading `/metrics/collectd.*.load.load.shortterm` will render the `shortterm` metric for all servers in your Graphite instance. Adding the `index` param to your URL defines which (zero-indexed) node should be used as the metric alias.
+For example, loading `/metrics/collectd.*.load.load.shortterm` will render the `shortterm` metric for all servers in your Graphite instance. Adding the `index` param to your URL defines which (zero-indexed) node should be used as the metric alias. (You can also specify multiple nodes with comma like `?index=1,3,5`.)
 
 ![usage](https://github.com/obfuscurity/dusk/raw/master/lib/dusk/public/img/screenshot-usage.png)
 

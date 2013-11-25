@@ -90,3 +90,8 @@ span.title, span.value {
   font-weight: bold;
 }
 
+.line {
+  background: #000;
+  opacity: .2;
+  z-index: 2;
+}

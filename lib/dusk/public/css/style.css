@@ -24,6 +24,7 @@ span.star {
 }
 
 div.wrapper {
+  position: relative;
   margin-top: 30px;
 }
 

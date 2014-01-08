@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
+gem 'foreman'
 gem 'sinatra'
 gem 'thin', '~> 1.5.0'
 gem 'rack-ssl-enforcer'

@@ -20,7 +20,11 @@ The only required environment variable is `GRAPHITE_URL`. This should be set to 
 
 ### Local
 
+The following instructions assume a working Ruby installation with the `bundler` gem already installed on your system.
+
 ```bash
+$ git clone https://github.com/obfuscurity/dusk.git
+$ cd dusk
 $ bundle install
 $ export GRAPHITE_URL=...
 $ foreman start
